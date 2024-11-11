@@ -18,7 +18,7 @@ class _SplahScreenState extends State<SplahScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const BottomNavBar()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HomeScreen()));
      });
   }
   @override
