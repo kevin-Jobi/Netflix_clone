@@ -219,35 +219,34 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.4,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image:movie.backdropPath != null
-    ? NetworkImage("$imageUrl${movie.backdropPath}")
-    : const AssetImage("assets/netflix.png") as ImageProvider  //new change
-,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        child: SafeArea(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                 Stack(
+  children: [
+    Container(
+      height: MediaQuery.of(context).size.height * 0.4,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: movie.backdropPath != null
+              ? NetworkImage("$imageUrl${movie.backdropPath}")
+              : const AssetImage("assets/netflix.png") as ImageProvider,
+          fit: BoxFit.cover,
+        ),
+      ),
+    ),
+    Positioned(
+      top: 10, 
+      left: 10, // Ensure the icon stays within the screen bounds
+      child: SafeArea(
+        child: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+    ),
+  ],
+),
+
                   const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.all(16.0),

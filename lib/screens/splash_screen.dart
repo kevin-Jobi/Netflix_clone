@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:netflix_clone/screens/homescreen.dart';
 import 'package:netflix_clone/widgets/bottom_nav_bar.dart';
 
 

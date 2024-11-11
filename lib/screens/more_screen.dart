@@ -25,24 +25,24 @@ class __MoreScreenStateState extends State<MoreScreen> {
                 color: Colors.white
                 ),
                 ),
-                actions:  [
-                 const Icon(
-                    Icons.cast,
-                    color: Colors.white,
-                    ),
-                    const SizedBox(width: 15,),
-                        ClipRRect(
-            borderRadius:BorderRadius.circular(6),
-            child: Container(
-              color: Colors.blue,
-              height: 27,
-              width: 27,
-            ),
-             ),
-             const SizedBox(
-              width:20,
-              )
-                ],
+            //     actions:  [
+            //      const Icon(
+            //         Icons.cast,
+            //         color: Colors.white,
+            //         ),
+            //         const SizedBox(width: 15,),
+            //             ClipRRect(
+            // borderRadius:BorderRadius.circular(6),
+            // child: Container(
+            //   color: Colors.blue,
+            //   height: 27,
+            //   width: 27,
+            // ),
+            //  ),
+            //  const SizedBox(
+            //   width:20,
+            //   )
+            //     ],
                 bottom:  TabBar(
                   dividerColor: Colors.black,
                   isScrollable: false,
